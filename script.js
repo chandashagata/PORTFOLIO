@@ -1,49 +1,58 @@
-// toggle icon navbar
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const firebaseConfig = {
+  apiKey: "AIzaSyCfeZBOE99Y32sMXjemqFEZeKB-tfY0xTg",
+  authDomain: "portfolio-contact-form-9a820.firebaseapp.com",
+  databaseURL: "https://portfolio-contact-form-9a820-default-rtdb.firebaseio.com",
+  projectId: "portfolio-contact-form-9a820",
+  storageBucket: "portfolio-contact-form-9a820.appspot.com",
+  messagingSenderId: "161656441105",
+  appId: "1:161656441105:web:998364044f438416fae4b0",
+  measurementId: "G-RPNF66ZF52"
+};
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+
+//initialize firebase
+firebase.initializeApp(firebaseConfig);
+
+//reference your database
+var contactformDB= firebase.database().ref('contactform');
+
+document.getElementById("contactform").addEventListener("submit", submitForm);
+
+function submitForm(e){
+  e.preventDefault();
+  var name= getElementVal('name');
+  var mobilenumber= getElementVal('mobilenumber');
+  var emailid= getElementVal('emailid');
+  var messagecont= getElementVal('messagecont');
+
+  savemessage(name, mobilenumber, emailid, messagecont);
+
+  //enable alert
+  document.querySelector('.alert').style.display ='block';
+  
+  //remove alert
+  setTimeout(() =>{
+    document.querySelector('.alert').style.display ='none';
+  }, 3000);
+
+  //reset the form
+  document.getElementById("contactform").reset();
+
 }
 
-// scroll sections
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+const savemessage= (mane, mobilenumber, emailid, messagecont) =>{
+  var newcontactform = contactformDB.push();
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 100;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+  newcontactform.set({
+    name : name,
+    mobilenumber : mobilenumber,
+    emailid : emailid,
+    messagecont : messagecont,
 
-        if(top >= offset && top < offset + height) {
-            // active navbar links
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-            // active sections for animation on scroll
-            sec.classList.add('show-animate');
-        }
-        // if want to animation that repeats on scroll use this
-        else {
-            sec.classList.remove('show-animate');
-        }
-    });
 
-    // sticky navbar
-    let header = document.querySelector('header');
-
-    header.classList.toggle('sticky', window.scrollY > 100);
-
-    // remove toggle icon and navbar when click navbar links (scroll)
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-
-    // animation footer on scroll
-    let footer = document.querySelector('footer');
-
-    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+  })
 }
+
+const getElementVal = (id) =>{
+  return document.getElementById(id).value;
+};
