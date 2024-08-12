@@ -617,3 +617,646 @@
 .foot .item a:hover {
    color: rgb(119, 107, 107);
 }
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+   * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+   }
+  
+   .logo{
+     color: rgb(0, 255, 238);
+   }
+  
+   .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10%;
+      align-items: center;
+      height: 70px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      background-color: rgb(0, 0, 0);
+   }
+  
+   .header .item {
+      display: flex;
+      column-gap: 12px;
+   }
+  
+   .header .item a {
+      text-decoration: none;
+      font-size: 10px;
+      color: white;
+   }
+  
+  
+   .header .item a:hover {
+      color: rgb(0, 255, 238);
+   }
+  
+   .hero-sec {
+      width: 120%;
+      background-color: rgb(154, 46, 255);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 650px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      
+   }
+  
+   .hero-sec .text {
+      padding: 0 10%;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+   }
+  
+   .hero-sec .text .btn {
+      display: flex;
+      column-gap: 20px;
+   }
+  
+   .hero-sec .text .btn .button-one {
+      padding: 10px 40px;
+      border: 2px solid rgb(0, 255, 238);
+      background-color: black;
+      color: rgb(0, 255, 238);
+      font-size: 17px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+   }
+  
+   .hero-sec .text .btn .button-one:hover {
+      padding: 10px 40px;
+      border-color: black;
+      background-color: rgb(0, 255, 238);
+      color: rgb(0, 0, 0);
+   }
+  
+   .hero-sec .text .btn button {
+     padding: 10px 40px;
+     border: 2px solid rgb(0, 255, 238);
+     background-color: black;
+     color: rgb(0, 255, 238);
+     font-size: 17px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+   }
+  
+   .hero-sec .text .btn button:hover {
+     padding: 10px 40px;
+     border-color: rgb(0, 0, 0);
+     background-color: rgb(0, 255, 238);
+     color: rgb(0, 0, 0);
+   }
+  
+   .hero-sec .head-text {
+      color: rgb(255, 255, 255);
+      font-size: 4rem;
+      font-weight: 700;
+   }
+  
+   .hero-sec p {
+      color: white;
+   }
+   
+   .socials{
+     margin-left: 185px;
+     margin-right: 100px;
+     position: absolute;
+      bottom: 4rem;
+      width: 170px;
+      display: flex;
+      
+      justify-content: space-between;
+   }
+   .socials a{
+     position: relative;
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     width: 40px;
+     height: 40px;
+     background: transparent;
+     border: white;
+     border-radius: 50%;
+     font-size: 20px;
+     color: white;
+     z-index: 1;
+     overflow: hidden;
+     transition: .5s;
+   }
+   .socials a:hover {
+     color: rgb(0, 255, 238);
+  }
+  
+  .socials a::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 0;
+     height: 100%;
+     background: black;
+     z-index: -1;
+     transition: .5s;
+  }
+  
+  .socials a:hover::before {
+     width: 100%;
+  }
+   
+  
+  
+  
+  
+  
+   .about {
+      width: 100%;
+     background-color: black;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 10%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      height: auto;
+   }
+  
+   .about .txt {
+     color: white;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+   }
+  
+   .about .about-text {
+      margin-top: 30px;
+      display: block;
+      column-gap: 44px;
+      align-items: center;
+      justify-content: center;
+   }
+  
+   .about .about-text .left img {
+      /* width: 411px; */
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 50px;
+      padding-top: 10px;
+      height: 370px;
+      border-radius: 50px;
+   }
+  
+   .about .about-text .right p {
+      text-align: justify;
+      color: white;
+   }
+  
+   .about .about-text .right p span {
+      color: rgb(0, 255, 238);
+      font-size: 20px;
+   }
+  
+   .service {
+      width: 120%;
+      background-color: black;
+      color: white;
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+  
+   .service .txt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+  
+   .service .main-box {
+      margin-top: 30px;
+      padding: 0 10%;
+      display: block;
+      column-gap: 20px;
+      align-items: center;
+      justify-content: center;
+   }
+  
+   .service .main-box .box {
+      margin-top: 40px;
+      background-color: #222;
+      width: 400px;
+      overflow: hidden;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      row-gap: 20px;
+      height: 300px;
+      border-radius: 7px;
+   }
+  
+   .service .main-box .box img {
+      width: 100px;
+   }
+  
+  
+  
+   .team {
+      background-color: black;
+      color: white;
+      width: 120%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+  
+   .team .txt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+  
+   .team .main-box {
+     color: white;
+      margin-top: 30px;
+      padding: 0 10%;
+      display: block;
+      margin-left: 8%;
+      column-gap: 20px;
+      align-items: center;
+      justify-content: center;
+   }
+  
+   .team .main-box .box {
+     
+      background-color: #222;
+      margin-top: 40px;
+      width: 350px;
+      overflow: hidden;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      row-gap: 20px;
+      height: 500px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+   }
+  
+   .team .main-box .box:hover {
+      background-color: rgb(0, 255, 238);
+      color: black;
+   }
+  
+  
+   .team .main-box .box img {
+      width: 100px;
+      border-radius: 50%;
+      border: none;
+   }
+   .team .main-box .box .cert{
+     color: rgb(34, 0, 255);
+  
+   }
+   
+  
+  
+  
+  
+   .skill {
+      width: 120%;
+     background-color: black;
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+  
+   .skill .main-box {
+      margin-top: 30px;
+      display: block;
+      column-gap: 40px;
+      padding: 0 10%;
+      align-items: center;
+      justify-content: center;
+   }
+  
+   .skill .txt {
+     color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+  
+  
+  
+  
+  
+  .skill .main-box .left .divone {
+      width: 450px;
+      height: 10px;
+      background-color: #ffffff;
+   }
+  
+   .skill .main-box .left {
+     color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      row-gap: 12px;
+   }
+  
+   .skill .main-box .left label {
+      display: flex;
+      align-items: center;
+   }
+  
+   .skill .main-box .left .div2 {
+      width: 450px;
+      height: 10px;
+      background-color: rgb(0, 255, 238);
+   }
+   .skill .main-box .left .div3 {
+     width: 315px;
+     height: 10px;
+     background-color: rgb(0, 255, 238);
+  }
+  .skill .main-box .left .div4 {
+     width: 135px;
+     height: 10px;
+     background-color: rgb(0, 255, 238);
+  }
+  .skill .main-box .left .div5 {
+     width: 360px;
+     height: 10px;
+     background-color: rgb(0, 255, 238);
+  }
+  
+  
+  
+  
+   .skill .main-box .right .divone {
+      width: 450px;
+      height: 10px;
+      
+      background-color: #ffffff;
+   }
+  
+   .skill .main-box .right {
+     color: white;
+      display: flex;
+      margin-top: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      row-gap: 12px;
+   }
+  
+   .skill .main-box .right label {
+      display: flex;
+      align-items: center;
+   }
+  
+   .skill .main-box .right .div2 {
+      width: 450px;
+      height: 10px;
+      background-color: rgb(0, 255, 238);
+   }
+   .skill .main-box .right .div3 {
+     width: 225px;
+     height: 10px;
+     background-color: rgb(0, 255, 238);
+  }
+  .skill .main-box .right .div4 {
+     width: 360px;
+     height: 10px;
+     background-color: rgb(0, 255, 238);
+  }
+  
+  
+  
+  
+  .project .main-box .box .vids{
+     
+      height: auto;
+  
+  }
+  
+   .project .txt {
+     color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+  
+   .project {
+      width: 120%;
+     background-color: black;
+      padding-top: 40px;
+      padding-bottom: 40px;
+   }
+  
+   .project .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+   }
+  
+   .project .btn button {
+      padding: 10px 40px;
+      background-color: crimson;
+      border: none;
+      font-size: 17px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+   }
+  
+   .project .btn button:hover {
+      padding: 10px 40px;
+      border: 2px solid crimson;
+      background-color: white;
+      color: crimson;
+   }
+  
+   .project .main-box {
+     
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10%;
+   }
+  
+   .project .main-box .box {
+      width: 339px;
+      background-color: white;
+      overflow: hidden;
+      margin: 10px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
+   }
+  
+   .project .main-box .box img {
+      width: -webkit-fill-available;
+      height: auto;
+   }
+  
+   .project .main-box .box h3 {
+     text-align: center;
+     color: black;
+     text-decoration: underline;
+   }
+  
+   .project .main-box .box p {
+      padding: 20px;
+      transition: all 0.4s ease-in-out;
+   }
+  
+   .project .main-box .box h3:hover {
+      text-decoration: underline;
+      color: crimson;
+      cursor: pointer;
+   }
+  
+  
+   .project .forms{
+     margin-top: 50px;
+   }
+   .project .forms input{
+     color: black;
+     background-color: rgb(226, 225, 225);
+     width: 54%;
+     margin-left: 20%;
+     font-size: 18px;
+     padding: 16px 16px;
+     border-radius: 10px;
+     border-width: 3px;
+     border-color: rgb(0, 255, 238);
+     margin-bottom: 20px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+   }
+   .project .forms textarea{
+     background-color: rgb(226, 225, 225);
+     width: 54%;
+     margin-left: 20%;
+     font-size: 18px;
+     padding: 16px 16px;
+     border-radius: 10px;
+     border-width: 3px;
+     border-color: rgb(0, 255, 238);
+     margin-bottom: 25px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+   }
+  
+   .project .forms input:focus-within{
+     outline: none;
+     border-color: green;
+     border-width: 3px;
+   }
+   .project .forms textarea:focus-within{
+     outline: none;
+     border-color: green;
+     border-width: 3px;
+   }
+  
+   .project .forms button{
+     background-color: #000000;
+     color: rgb(0, 255, 238);
+     border-radius: 10px;
+     border-color: rgb(0, 255, 238);
+     font-size: 18px;
+     padding: 10px 18px;
+     text-align: center;
+     display: flex;
+     margin: auto;
+   }
+   .project .forms button:hover{
+     background-color: rgb(0, 255, 238);
+     color: rgb(0, 0, 0);
+     cursor: pointer;
+     border-radius: 10px;
+     border-color: black;
+     opacity: 70%;
+   }
+   .alert{
+     width: 40%;
+     color: white;
+     background-color: green;
+    
+     padding: 10px 20px;
+     border-radius: 10px;
+     text-align: center;
+     margin-left: 25%;
+     font-size: 18px;
+     
+     display: block;
+   }
+   
+  
+  
+  
+  
+  
+   .foot {
+     display: flex;
+     justify-content: space-between;
+     padding: 0 5%;
+     align-items: center;
+     height: 70px;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     background-color: rgb(154, 46, 255);
+  }
+  
+  .foot .copyright p{
+     color: black;
+  }
+  
+  .foot .copyright p span{
+     color: rgb(0, 255, 238);
+     cursor: pointer;
+  }
+  
+  .foot .item {
+     display: flex;
+     column-gap: 30px;
+  }
+  
+  .foot .item a {
+     text-decoration: none;
+     font-size: 17px;
+     color: white;
+  }
+  
+  
+  .foot .item a:hover {
+     color: rgb(119, 107, 107);
+  }
+ }
